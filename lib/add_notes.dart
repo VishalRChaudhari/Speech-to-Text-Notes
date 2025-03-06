@@ -19,10 +19,10 @@ class AddNote extends StatelessWidget {
           GestureDetector(
             onTap: () {
               //if text is not empty then save else cancel and pop
-              if(_notecontroller.text.isNotEmpty){
-                Navigator.of(context).pop(
-                  Notes(note: _notecontroller.text),
-                );
+              if (_notecontroller.text.isNotEmpty) {
+                Navigator.of(context).pop(Notes(note: _notecontroller.text));
+              } else {
+                Navigator.of(context).pop();
               }
             },
             child: Text(
@@ -50,8 +50,12 @@ class AddNote extends StatelessWidget {
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {},
-      child: Icon(Icons.mic),
+      floatingActionButton: MaterialButton(
+        onPressed: () {},
+        height: 50,
+        shape: CircleBorder(),
+        color: ColorScheme.of(context).onInverseSurface,
+        child: Icon(Icons.mic),
       ),
     );
   }

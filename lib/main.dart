@@ -3,7 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:text_to_speech/home.dart';
 import 'package:provider/provider.dart';
 import 'package:text_to_speech/provider/notes.dart';
-import 'package:text_to_speech/widgets/speech_to_text.dart';
 
 void main() {
   runApp(
@@ -25,6 +24,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: MyHomePage(), theme: theme);
+    return MaterialApp(home: Home(), theme: theme);
   }
 }
